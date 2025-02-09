@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "checkJs": true,
+    "baseUrl": "./",
+    "paths": {
+      "*": ["./*"],
+    },
+    "noImplicitAny": false,  
+    "strict": false,     
+    
+    "typeRoots": [
+      "./", "./types" 
+    ],
+    "types": [] 
+  },
+
+  "include": [
+    "./**/*.d.ts",  
+    "./*.js",
+    "./plugins/**.js",            
+  ],
+
+  "exclude": [
+    "./libs/**/*.wasm" 
+  ]
+}
