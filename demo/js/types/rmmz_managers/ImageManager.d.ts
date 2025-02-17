@@ -1,12 +1,22 @@
 declare class ImageManager {
-  static iconWidth: number;
-  static iconHeight: number;
-  static faceWidth: number;
-  static faceHeight: number;
+  private constructor();
+
+  static standardIconWidth: number;
+  static standardIconHeight: number;
+  static standardFaceWidth: number;
+  static standardFaceHeight: number;
 
   private static _cache: Record<string, Bitmap>;
   private static _system: Record<string, Bitmap>;
   private static _emptyBitmap: Bitmap;
+
+  static get iconWidth(): number;
+  static get iconHeight(): number;
+  static get faceWidth(): number;
+  static get faceHeight(): number;
+
+  private static getIconSize(): number;
+  private static getFaceSize(): number;
 
   static loadAnimation(filename: string): Bitmap;
   static loadBattleback1(filename: string): Bitmap;
